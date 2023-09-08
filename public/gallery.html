@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Side menu -->
+    <div class="side-menu">
+      <i class="fa fa-times-circle fa-2x close-menu" aria-hidden="true"></i>
+      <div class="inner-menu">
+        <div class="auto-search">
+          <button type="submit">search</button>
+        </div>
+        <ul class="side-categories">
+          <li><a href="#!">paintings</a></li>
+          <li><a href="#!">digital arts</a></li>
+          <li><a href="#!">printmaking</a></li>
+          <li><a href="#!">photography</a></li>
+          <li><a href="#!">sculptures</a></li>
+          <li><a href="#!">abstract art/paintings</a></li>
+          <li><a href="#!">nft</a></li>
+          <li><a href="#!">oil paintings</a></li>
+          <li><a href="#!">charcoal portraits</a></li>
+        </ul>
+        <a href="#!" class="profile-link"
+          ><i class="fa fa-user-circle" aria-hidden="true"></i>profile</a
+        >
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1><a href="#!">MAGE</a></h1>
+        </div>
+        <div class="auto-search">
+          <input
+            type="text"
+            class="search"
+            placeholder="search for your arts here..."
+          />
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="side">
+          <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+          <i class="fas fa-bars-staggered fa-2x"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Dashboard -->
+      <div class="side-dash">
+        <div class="inner-dash">
+          <h3>categories</h3>
+          <ul>
+            <li><a href="#!">paintings</a></li>
+            <li><a href="#!">digital arts</a></li>
+            <li><a href="#!">printmaking</a></li>
+            <li><a href="#!">photography</a></li>
+            <li><a href="#!">sculptures</a></li>
+            <li><a href="#!">abstract art/paintings</a></li>
+            <li><a href="#!">nft</a></li>
+            <li><a href="#!">oil paintings</a></li>
+            <li><a href="#!">charcoal portraits</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arts Display -->
+      <div class="gallery">
+        <section class="banner">
+          <div class="inner-banner"></div>
+        </section>
+
+        <!-- Display product -->
+        <section class="market">
+          <!-- <h3>Gallery</h3> -->
+          <div class="switch">
+            <h3 class="marketplace tab-item current" id="tab-1">gallery</h3>
+            <h3 class="auction tab-item" id="tab-2">auction</h3>
+          </div>
+          <div
+            class="product-case tab-content-item show"
+            id="tab-1-content"
+          ></div>
+          <!-- Auction Tab -->
+          <div class="auction-case tab-content-item" id="tab-2-content">
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+            <div class="auction-art">
+              <img src="images/5eaf615122919-1.png" alt="" />
+              <div class="auction-description">
+                <h2 class="author">Author: <span>john doe</span></h2>
+                <h3 class="categories-auction">
+                  category: <span>charcoal portraits</span>
+                </h3>
+                <p class="title-auction">title: <span>melancholy</span></p>
+                <small class="description"
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quaerat voluptatibus saepe cum odio officiis provident dolore,
+                  voluptates maxime, necessitatibus natus excepturi inventore
+                  est eligendi nesciunt tempore! Harum, maxime accusantium
+                  praesentium doloremque libero totam? Aperiam alias officiis
+                  nam. Quia laborum incidunt unde veritatis? In suscipit
+                  asperiores, nisi earum quo ab iure?</small
+                >
+                <a href="#!" class="auction-bid">bid now...</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Cart UI -->
+    <section class="cart-overlay">
+      <div class="inner-cart">
+        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+        <h2 class="heading">your cart</h2>
+        <div class="cart-display"></div>
+        <div class="checkout">
+          <p class="total">total: $<span class="cart-total">0</span></p>
+          <a href="#!" class="checkout-btn">checkout</a>
+          <a href="#!" class="clear-cart-btn">clear cart</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile UI -->
+    <section class="outer-profile">
+      <div class="profile-nav">
+        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class="inner-profile">
+        <div class="identity">
+          <div class="profile-img"></div>
+          <div class="profile-info">
+            <div class="user-name">
+              <small>Username</small>
+              <h2>john doe</h2>
+            </div>
+            <div class="user-bio">
+              <small>bio</small>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                placeat voluptatum hic magni quia adipisci sed sequi temporibus
+                excepturi amet!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="check">
+          <a href="#!">contact / delivery</a>
+          <a href="#!">Saved items</a>
+          <a href="#!">recent orders</a>
+          <a href="/public/upload.html">upload your arts designs</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="links">
+          <div class="details">
+            <p>about mage</p>
+            <ul>
+              <li><a href="#!">about us</a></li>
+              <li><a href="#!">careers</a></li>
+              <li><a href="#!">blog</a></li>
+              <li><a href="#!">our artist</a></li>
+              <li><a href="#!">contact us</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>for buyers</p>
+            <ul>
+              <li><a href="#!">personal shopping</a></li>
+              <li><a href="#!">invite friends</a></li>
+              <li><a href="#!">commission an artwork</a></li>
+              <li><a href="#!">delivery</a></li>
+              <li><a href="#!">returns and refunds</a></li>
+              <li><a href="#!">customer support</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>for artist</p>
+            <ul>
+              <li><a href="#!">why sell on mage?</a></li>
+              <li><a href="#!">terms and conditions</a></li>
+              <li><a href="#!">seller support</a></li>
+              <li><a href="#!">apply to sell</a></li>
+              <li><a href="#!">how to sell an art online</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>artworks</p>
+            <ul>
+              <li><a href="#!">paintings</a></li>
+              <li><a href="#!">art prints</a></li>
+              <li><a href="#!">sculptures</a></li>
+              <li><a href="#!">portraits drawings</a></li>
+              <li><a href="#!">digital arts</a></li>
+              <li><a href="#!">nft</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="social">
+          <div>
+            <a href="#!">&copy; mage 2023 | terms of use | privacy policy</a>
+          </div>
+          <div>
+            <a href="#!"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#!"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#!"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#!"
+              ><i class="fab fa-pinterest-p" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

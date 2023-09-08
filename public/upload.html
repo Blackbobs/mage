@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1><a href="/public/gallery.html">MAGE</a></h1>
+        </div>
+       
+    </nav>
+
+    <main class="outer-container">
+        <div class="container">
+            <h2>upload your art designs</h2>
+            <form action="">
+                <div class="top-form">
+                    <div class="author-tab">
+                        <label for="author">author</label>
+                        <input type="text" name="author" id="author" placeholder="Author's name">
+                    </div>
+                    <div class="category-tab">
+                        <label for="category">category</label>
+                        <select name="category" id="category">
+                            <option value="photography" id="photography">photography</option>
+                            <option value="paintings" id="paintings">paintings</option>
+                            <option value="digital arts" id="digital arts">digital arts</option>
+                            <option value="printmaking" id="printmaking">printmaking</option>
+                            <option value="sculptures" id="sculptures">sculptures</option>
+                            <option value="abstract art/paintings" id="abstract art/paintings">abstract art/paintings</option>
+                            <option value="nft" id="nft">nft</option>
+                            <option value="charcoal portraits" id="charcoal portraits">charcoal portraits</option>
+                        </select>
+                       
+                    </div>       
+                </div>
+                <div class="description">
+                    <textarea name="description-tab" id="description-tab" cols="50" rows="10" placeholder="Description"></textarea>
+                    <input type="radio" name="auction-tab" id="auction-tab">
+                    <label for="auction-tab">Auction</label>
+                </div>
+                <div class="upload-file">
+                    <input type="file" name="art-img" id="art-img">
+                    <img src="" alt="">
+                </div>
+                <button type="submit">publish</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="links">
+          <div class="details">
+            <p>about mage</p>
+            <ul>
+              <li><a href="#!">about us</a></li>
+              <li><a href="#!">careers</a></li>
+              <li><a href="#!">blog</a></li>
+              <li><a href="#!">our artist</a></li>
+              <li><a href="#!">contact us</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>for buyers</p>
+            <ul>
+              <li><a href="#!">personal shopping</a></li>
+              <li><a href="#!">invite friends</a></li>
+              <li><a href="#!">commission an artwork</a></li>
+              <li><a href="#!">delivery</a></li>
+              <li><a href="#!">returns and refunds</a></li>
+              <li><a href="#!">customer support</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>for artist</p>
+            <ul>
+              <li><a href="#!">why sell on mage?</a></li>
+              <li><a href="#!">terms and conditions</a></li>
+              <li><a href="#!">seller support</a></li>
+              <li><a href="#!">apply to sell</a></li>
+              <li><a href="#!">how to sell an art online</a></li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>artworks</p>
+            <ul>
+              <li><a href="#!">paintings</a></li>
+              <li><a href="#!">art prints</a></li>
+              <li><a href="#!">sculptures</a></li>
+              <li><a href="#!">portraits drawings</a></li>
+              <li><a href="#!">digital arts</a></li>
+              <li><a href="#!">nft</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="social">
+          <div>
+            <a href="#!">&copy; mage 2023 | terms of use | privacy policy</a>
+          </div>
+          <div>
+            <a href="#!"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#!"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#!"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#!"
+              ><i class="fab fa-pinterest-p" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

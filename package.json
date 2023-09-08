@@ -1,0 +1,18 @@
+{
+  "name": "mage",
+  "version": "1.0.0",
+  "description": "Welcome to **Mage**. We are an E-commerce and social media platform focused on promoting and selling various forms of _art_. we aim to connect artist,collectors with the global online art community,providing them with a platform to showcase and sell their work. Our goal is to bring visibility to talented artist by leveraging _digital market strategies_ and creating an accessible avenue for art enthusiats to discover and purchase unique pieces.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "stripe": "^13.4.0"
+  }
+}
