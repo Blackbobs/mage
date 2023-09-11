@@ -127,21 +127,15 @@ class UI {
 
       if (searchText.length === 0) {
         this.displayProducts(products);
-        // this.setupAPP();
-        // this.getBagButtons();
-        // this.addCartItem(item);
-        // matches = [];
       }
-      // console.log(matches);
+
       this.outputSearch(matches);
     });
   }
 
   outputSearch(matches) {
     this.displayProducts(matches);
-    // this.setupAPP();
     this.getBagButtons();
-    // this.addCartItem(item);
   }
 
   // Addd to cartBtn functionality
