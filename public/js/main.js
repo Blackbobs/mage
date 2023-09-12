@@ -16,6 +16,8 @@ const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 const checkoutBtn = document.querySelector(".checkout-btn");
 
+checkoutBtn.addEventListener("click", () => {});
+
 // Switch between tabs
 function selectItem(e) {
   removeBorder();
