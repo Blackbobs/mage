@@ -20,20 +20,28 @@
     </header>
 
     <section class="signup-page">
-      <form action="" class="signup-form">
+      <form class="signup-form">
         <div class="name">
-          <input type="text" placeholder="enter your fullname" />
+          <input
+            type="text"
+            name="fullname"
+            placeholder="enter your fullname"
+          />
         </div>
         <div class="email-gender">
-          <input type="email" placeholder="enter your email" />
+          <input type="email" name="email" placeholder="enter your email" />
           <select name="Gender" id="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
         <div class="password">
-          <input type="password" placeholder="enter your password" />
-          <input type="password" placeholder="confirm your password" />
+          <input
+            type="password"
+            name="password"
+            placeholder="enter your password"
+          />
+          <!-- <input type="password" placeholder="confirm your password" /> -->
         </div>
 
         <button type="submit">signup</button>

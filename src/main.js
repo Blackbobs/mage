@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -12,6 +13,7 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig);
+const auth = getAuth();
 
 const tabItems = document.querySelectorAll(".tab-item");
 const tabContentItems = document.querySelectorAll(".tab-content-item");
@@ -30,8 +32,24 @@ const sideMenu = document.querySelector(".side-menu");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 const checkoutBtn = document.querySelector(".checkout-btn");
+const signupForm = document.querySelector(".signup-form");
 
-checkoutBtn.addEventListener("click", () => {});
+// Signup new users
+// signupForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   const email = signupForm.email.value;
+//   const password = signupForm.password.value;
+
+//   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
+//     console.log(cred.user);
+//     window.location("public/gallery.html");
+//     signupForm.reset();
+//   });
+// });
+
+// checkout with stripe
+// checkoutBtn.addEventListener("click", () => {});
 
 // Switch between tabs
 function selectItem(e) {
