@@ -1,19 +1,20 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { initializeApp } from "firebase/app";
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyD4hkvtcR1OrLyYIRPR10ZWhdncF584rsI",
-  authDomain: "mage-5b9f9.firebaseapp.com",
-  projectId: "mage-5b9f9",
-  storageBucket: "mage-5b9f9.appspot.com",
-  messagingSenderId: "338442865042",
-  appId: "1:338442865042:web:c75da25ea80909534d594b",
-  measurementId: "G-XVN8KVCCK3",
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD4hkvtcR1OrLyYIRPR10ZWhdncF584rsI",
+//   authDomain: "mage-5b9f9.firebaseapp.com",
+//   projectId: "mage-5b9f9",
+//   storageBucket: "mage-5b9f9.appspot.com",
+//   messagingSenderId: "338442865042",
+//   appId: "1:338442865042:web:c75da25ea80909534d594b",
+//   measurementId: "G-XVN8KVCCK3",
+// };
 
-initializeApp(firebaseConfig);
-const auth = getAuth();
+// initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth();
 
 const tabItems = document.querySelectorAll(".tab-item");
 const tabContentItems = document.querySelectorAll(".tab-content-item");
@@ -32,24 +33,29 @@ const sideMenu = document.querySelector(".side-menu");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 const checkoutBtn = document.querySelector(".checkout-btn");
-const signupForm = document.querySelector(".signup-form");
+const signupForm = document.querySelector("#signup-form");
 
 // Signup new users
+signupForm.addEventListener("submit", () => {
+  console.log(123);
+});
 // signupForm.addEventListener("submit", (e) => {
 //   e.preventDefault();
 
-//   const email = signupForm.email.value;
-//   const password = signupForm.password.value;
+//   // const email = signupForm.email.value;
+//   // const password = signupForm.password.value;
 
 //   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-//     console.log(cred.user);
-//     window.location("public/gallery.html");
-//     signupForm.reset();
+//     // console.log(cred.user);
+//     // window.location("public/gallery.html");
+//     // signupForm.reset();
 //   });
 // });
 
 // checkout with stripe
-// checkoutBtn.addEventListener("click", () => {});
+checkoutBtn.addEventListener("click", () => {
+  console.log(123);
+});
 
 // Switch between tabs
 function selectItem(e) {
