@@ -90,6 +90,7 @@ body {
     padding: 50px 20px;
     align-self: flex-start;
     width: 600px;
+    // height: max-content;
     margin: 20px 0;
     background-color: lighten($color: $primary-color, $amount: 5);
 
@@ -268,7 +269,7 @@ body {
   width: 100%;
   text-align: center;
   position: static;
-  bottom: 0;
+  // bottom: 0;
   background-color: darken($color: $secondary-color, $amount: 5);
 
   a {

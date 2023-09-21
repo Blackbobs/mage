@@ -1,93 +1,34 @@
-// import { initializeApp } from "firebase/app";
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  selectItem,
+  tabItems,
+  displayMenu,
+  displayProfile,
+  profilePage,
+} from "./utilities.js";
+import { signUp, signupForm } from "./signup.js";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyD4hkvtcR1OrLyYIRPR10ZWhdncF584rsI",
-//   authDomain: "mage-5b9f9.firebaseapp.com",
-//   projectId: "mage-5b9f9",
-//   storageBucket: "mage-5b9f9.appspot.com",
-//   messagingSenderId: "338442865042",
-//   appId: "1:338442865042:web:c75da25ea80909534d594b",
-//   measurementId: "G-XVN8KVCCK3",
-// };
-
-// initializeApp(firebaseConfig);
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth();
-
-const tabItems = document.querySelectorAll(".tab-item");
-const tabContentItems = document.querySelectorAll(".tab-content-item");
 const productDom = document.querySelector(".product-case");
 const cartTotal = document.querySelector(".cart-total");
 const cartBtn = document.querySelector(".fa-cart-plus");
 const cartOverlay = document.querySelector(".cart-overlay");
 const closeBtn = document.querySelectorAll(".fa-times-circle");
 const profileBtn = document.querySelectorAll(".fa-user-circle");
-const profilePage = document.querySelector(".outer-profile");
 const cartDisplay = document.querySelector(".cart-display");
 const clearCartBtn = document.querySelector(".clear-cart-btn");
 const closeMenu = document.querySelector(".close-menu");
 const barMenu = document.querySelector(".fa-bars-staggered");
-const sideMenu = document.querySelector(".side-menu");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
-const checkoutBtn = document.querySelector(".checkout-btn");
-const signupForm = document.querySelector("#signup-form");
+// const checkoutBtn = document.querySelector(".checkout-btn");
+// let currentUrl = "signup.html";
 
-// Signup new users
-signupForm.addEventListener("submit", () => {
-  console.log(123);
-});
-// signupForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   // const email = signupForm.email.value;
-//   // const password = signupForm.password.value;
-
-//   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-//     // console.log(cred.user);
-//     // window.location("public/gallery.html");
-//     // signupForm.reset();
-//   });
-// });
-
-// checkout with stripe
-checkoutBtn.addEventListener("click", () => {
-  console.log(123);
-});
-
-// Switch between tabs
-function selectItem(e) {
-  removeBorder();
-  removeShow();
-  this.classList.add("current");
-  const tabContentItem = document.querySelector(`#${this.id}-content`);
-  tabContentItem.classList.add("show");
-}
-
-// remove border from each tab
-function removeBorder() {
-  tabItems.forEach((item) => item.classList.remove("current"));
-}
-
-// remove the show class from each tab
-function removeShow() {
-  tabContentItems.forEach((item) => item.classList.remove("show"));
-}
-
-// display menu
-function displayMenu() {
-  sideMenu.classList.toggle("show");
-}
-
-// display the profile page
-function displayProfile() {
-  profilePage.classList.add("show");
-}
+// if (currentUrl) {
+signupForm.addEventListener("submit", signUp);
+// }
 
 // Event Listeners
 barMenu.addEventListener("click", displayMenu);
+
 closeMenu.addEventListener("click", displayMenu);
 
 tabItems.forEach((item) => item.addEventListener("click", selectItem));
@@ -149,7 +90,7 @@ class UI {
                 <div class="check">
                   <small class="price">$${product.price}</small>
                   <button href="#!" class="plus-cart" data-id=${product.id}>add to cart</button>
-                  
+
                 </div>
           </div>
       `;
