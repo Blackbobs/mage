@@ -2,6 +2,12 @@ export const tabItems = document.querySelectorAll(".tab-item");
 const tabContentItems = document.querySelectorAll(".tab-content-item");
 const sideMenu = document.querySelector(".side-menu");
 export const profilePage = document.querySelector(".outer-profile");
+const mainPage = document.querySelectorAll(".main-page");
+const signUpBtn = document.querySelector(".signup-btn");
+const loginBtn = document.querySelector(".login-btn");
+const loginPage = document.querySelector(".alpha");
+const signupPage = document.querySelector(".beta");
+export const galleryPage = document.querySelector(".delta");
 
 // Switch between tabs
 export function selectItem(e) {
@@ -30,3 +36,20 @@ export function displayMenu() {
 export function displayProfile() {
   profilePage.classList.add("show");
 }
+
+export function displayPage(e) {
+  displayNone();
+  const target = e.target;
+  if (target == signUpBtn) {
+    signupPage.classList.add("show");
+  } else if (target == loginBtn) {
+    loginPage.classList.add("show");
+  }
+}
+
+export function displayNone() {
+  mainPage.forEach((page) => page.classList.remove("show"));
+}
+
+signUpBtn.addEventListener("click", displayPage);
+loginBtn.addEventListener("click", displayPage);

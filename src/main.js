@@ -5,7 +5,7 @@ import {
   displayProfile,
   profilePage,
 } from "./utilities.js";
-import { signUp, signupForm } from "./signup.js";
+import { login, loginForm, signUp, signupForm } from "./signup.js";
 
 const productDom = document.querySelector(".product-case");
 const cartTotal = document.querySelector(".cart-total");
@@ -20,11 +20,10 @@ const barMenu = document.querySelector(".fa-bars-staggered");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 // const checkoutBtn = document.querySelector(".checkout-btn");
-// let currentUrl = "signup.html";
+const currentUrl = "signup.html";
 
-// if (currentUrl) {
 signupForm.addEventListener("submit", signUp);
-// }
+loginForm.addEventListener("submit", login);
 
 // Event Listeners
 barMenu.addEventListener("click", displayMenu);

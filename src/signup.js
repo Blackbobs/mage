@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { displayNone, galleryPage } from "./utilities.js";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -13,8 +18,11 @@ const firebaseConfig = {
 };
 
 export const signupForm = document.querySelector("#signup-form");
+export const loginForm = document.querySelector("#login-form");
+
 initializeApp(firebaseConfig);
 const auth = getAuth();
+
 export function signUp(e) {
   e.preventDefault();
 
@@ -22,10 +30,27 @@ export function signUp(e) {
   const password = signupForm.password.value;
 
   createUserWithEmailAndPassword(auth, email, password)
-    .then((cred) => {
-      //   console.log(cred.user);
+    .then(() => {
+      displayNone();
+      galleryPage.classList.add("show");
       signupForm.reset();
-      window.location = "gallery.html";
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+}
+
+export function login(e) {
+  e.preventDefault();
+
+  const email = loginForm.email.value;
+  const password = loginForm.password.value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      displayNone();
+      galleryPage.classList.add("show");
+      loginForm.reset();
     })
     .catch((error) => {
       console.log(error.message);
