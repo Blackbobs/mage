@@ -114,6 +114,7 @@ body {
     height: 60vh;
     margin: 20px 0;
     background-color: darken($color: $secondary-color, $amount: 5);
+    box-shadow: 3px 3px 15px rgba(22, 78, 99, 0.3);
 
     .image {
       width: 100%;
@@ -229,7 +230,7 @@ body {
 
   #login-form {
     background-color: darken($color: $secondary-color, $amount: 5);
-    box-shadow: 3px 3px 15px rgba(51, 75, 72, 0.2);
+    box-shadow: 3px 3px 15px rgba(22, 78, 99, 0.3);
     border-radius: 3px;
     padding: 50px 20px;
     align-self: flex-start;
@@ -536,10 +537,6 @@ main {
   gap: 10px;
   margin: 90px auto;
   padding: 20px;
-
-  // &.stop-scrolling {
-  //   overflow: hidden;
-  // }
 
   // side-menu
   .side-dash {
@@ -1036,131 +1033,6 @@ main {
           color: $brand-color;
           transition: all 0.5s linear;
         }
-      }
-    }
-  }
-}
-
-// Upload UI
-.outer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 960px;
-
-  h2 {
-    background-color: $brand-color;
-    color: $primary-color;
-    text-align: center;
-    width: 80vw;
-    border-radius: 3px;
-    text-transform: capitalize;
-    padding: 10px 20px;
-    margin: 10px;
-  }
-
-  form {
-    width: 100%;
-    max-width: 960px;
-    margin: 10px auto;
-    color: $primary-color;
-    text-transform: capitalize;
-
-    .top-form {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-
-      .author-tab {
-        flex: 1;
-        margin: 20px 0;
-        align-self: center;
-
-        label {
-          font-weight: 700;
-          font-size: 1.5rem;
-        }
-        input {
-          padding: 13px;
-          margin: 0 10px;
-          border: none;
-          border-radius: 3px;
-          outline: none;
-          width: 70%;
-        }
-      }
-
-      .category-tab {
-        margin: 20px 0;
-        align-self: center;
-
-        label {
-          font-weight: 700;
-          font-size: 1.3rem;
-        }
-
-        select {
-          padding: 10px;
-          margin: 0 10px;
-          outline: none;
-          border: none;
-          border-radius: 3px;
-        }
-      }
-    }
-
-    .description {
-      margin: 20px;
-
-      textarea {
-        padding: 10px;
-        outline: none;
-        border: none;
-        color: $dark-color;
-        margin: 10px;
-        border-radius: 5px;
-        display: block;
-      }
-      input {
-        margin-left: 10px;
-        padding: 20px;
-      }
-      label {
-        font-weight: 600;
-        font-size: 1.3rem;
-        font-style: italic;
-        padding: 10px 0;
-      }
-    }
-
-    .upload-file {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-
-      input {
-        padding: 30px;
-        background-color: lighten($color: $secondary-color, $amount: 5);
-        cursor: pointer;
-        border-radius: 3px;
-      }
-    }
-
-    button {
-      width: 100%;
-      padding: 15px;
-      background-color: lighten($color: $secondary-color, $amount: 5);
-      color: $light-color;
-      border: none;
-      border-radius: 3px;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      font-weight: 600;
-
-      &:hover {
-        opacity: 0.8;
-        transition: all 0.5s ease-in-out;
       }
     }
   }

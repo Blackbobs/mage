@@ -21,6 +21,10 @@ const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 // const checkoutBtn = document.querySelector(".checkout-btn");
 
+// checkoutBtn.addEventListener("click", () => {
+//   console.log(123);
+// });
+
 signupForm.addEventListener("submit", signUp);
 loginForm.addEventListener("submit", login);
 
