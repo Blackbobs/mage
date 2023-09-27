@@ -65,13 +65,14 @@ body {
   align-items: center;
   justify-content: space-between;
   color: $primary-color;
+  background-color: darken($color: $secondary-color, $amount: 3);
 
   a {
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
     padding: 10px;
-    margin-left: 50px;
+    margin-left: 10px;
     cursor: pointer;
     text-transform: lowercase;
     font-size: 2rem;
@@ -102,28 +103,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 0;
-  background-color: $light-color;
+  margin: 0;
+  background-color: $primary-color;
 
   #signup-form {
     border-radius: 5px;
     padding: 50px 20px;
     align-self: flex-start;
     width: 600px;
-    // height: max-content;
+    height: 60vh;
     margin: 20px 0;
-    background-color: lighten($color: $primary-color, $amount: 5);
+    background-color: darken($color: $secondary-color, $amount: 5);
+
+    .image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid $light-color;
+      padding: 10px;
+
+      img {
+        width: 80px;
+      }
+    }
 
     input {
       display: block;
       width: 100%;
-      margin: 30px auto;
-      padding: 15px;
+      margin: 30px 0;
+      padding: 15px 10px;
       border-radius: 3px;
       outline: none;
       border: none;
       background-color: $primary-color;
-      border: 3px solid $secondary-color;
     }
     input::placeholder {
       color: $dark-color;
@@ -147,14 +160,14 @@ body {
       width: 100%;
       margin: 25px 0;
       outline: none;
-      background-color: $secondary-color;
+      background-color: $primary-color;
       border-radius: 3px;
       border: none;
       font-weight: 700;
       font-size: 1.3rem;
       text-transform: capitalize;
       cursor: pointer;
-      color: #ffffff;
+      color: $secondary-color;
 
       &:hover {
         opacity: 0.8;
@@ -168,20 +181,19 @@ body {
 .main-header {
   width: 100%;
   height: auto;
-  padding: 5px 20px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: $primary-color;
   background-color: darken($color: $secondary-color, $amount: 5);
-  box-shadow: 3px 3px 15px rgba(51, 75, 72, 0.2);
 
   h1 a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-    padding: 10px;
-    margin-left: 50px;
+    padding: 5px;
+    margin-left: 10px;
     cursor: pointer;
     text-transform: lowercase;
     font-size: 2rem;
@@ -213,24 +225,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $light-color;
-  color: $dark-color;
+  background-color: $primary-color;
 
   #login-form {
-    background-color: darken($color: $primary-color, $amount: 3);
+    background-color: darken($color: $secondary-color, $amount: 5);
     box-shadow: 3px 3px 15px rgba(51, 75, 72, 0.2);
     border-radius: 3px;
     padding: 50px 20px;
     align-self: flex-start;
-    width: 450px;
-    margin: 50px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+
+    .image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid $light-color;
+      padding: 10px;
+
+      img {
+        width: 80px;
+      }
+    }
 
     input {
       display: block;
       width: 100%;
       margin: 30px 0;
-      padding: 15px;
-      border-radius: 5px;
+      padding: 15px 10px;
+      border-radius: 3px;
       outline: none;
       border: none;
       color: $dark-color;
@@ -245,7 +270,7 @@ body {
   }
 
   a {
-    color: $dark-color;
+    color: $light-color;
     text-decoration: none;
     font-style: italic;
     margin: 5px;
@@ -262,14 +287,14 @@ body {
     width: 100%;
     margin: 25px 0;
     outline: none;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     border-radius: 3px;
     border: none;
     font-weight: 700;
     font-size: 1.3rem;
     text-transform: capitalize;
     cursor: pointer;
-    color: $primary-color;
+    color: $secondary-color;
 
     &:hover {
       opacity: 0.8;
@@ -430,11 +455,20 @@ body {
     font-size: 1.5rem;
     margin: 0 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 70px;
+    }
 
     a {
       text-decoration: none;
       background-color: $secondary-color;
       color: set-text-color($secondary-color);
+      display: inline-block;
+      margin: 0 10px;
+      text-transform: lowercase;
     }
   }
 

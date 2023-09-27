@@ -20,7 +20,6 @@ const barMenu = document.querySelector(".fa-bars-staggered");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
 // const checkoutBtn = document.querySelector(".checkout-btn");
-const currentUrl = "signup.html";
 
 signupForm.addEventListener("submit", signUp);
 loginForm.addEventListener("submit", login);
