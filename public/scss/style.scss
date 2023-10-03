@@ -304,27 +304,6 @@ body {
   }
 }
 
-.terms {
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  position: static;
-  // bottom: 0;
-  background-color: darken($color: $secondary-color, $amount: 5);
-
-  a {
-    margin: 0 30px;
-    text-decoration: none;
-    color: $light-color;
-    text-transform: capitalize;
-
-    &:hover {
-      color: $brand-color;
-      transition: all 0.5s ease-in-out;
-    }
-  }
-}
-
 // Side Menu
 .side-menu {
   z-index: 8;

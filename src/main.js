@@ -19,15 +19,14 @@ const closeMenu = document.querySelector(".close-menu");
 const barMenu = document.querySelector(".fa-bars-staggered");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
-// const checkoutBtn = document.querySelector(".checkout-btn");
-
-// checkoutBtn.addEventListener("click", () => {
-//   console.log(123);
-// });
+const checkoutBtn = document.querySelector(".checkout-btn");
 
 signupForm.addEventListener("submit", signUp);
 loginForm.addEventListener("submit", login);
 
+checkoutBtn.addEventListener("click", () => {
+  console.log(123);
+});
 // Event Listeners
 barMenu.addEventListener("click", displayMenu);
 
@@ -240,7 +239,7 @@ class UI {
   }
 }
 
-class Storage {
+export class Storage {
   // Save products in the storage
   static saveProduct(products) {
     localStorage.setItem("products", JSON.stringify(products));
