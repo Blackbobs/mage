@@ -104,7 +104,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background: url("../images/sky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   #signup-form {
     border-radius: 5px;
@@ -226,7 +230,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background: url("../images/sky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   #login-form {
     background-color: darken($color: $secondary-color, $amount: 5);
@@ -628,7 +636,8 @@ main {
           img {
             width: 100%;
             max-width: 300px;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
           }
 
           .grp {
@@ -639,8 +648,8 @@ main {
           }
 
           .title {
-            font-size: 1rem;
-            padding: 5px;
+            font-size: 0.9rem;
+            padding: 3px;
             color: $brand-color;
             text-transform: capitalize;
           }

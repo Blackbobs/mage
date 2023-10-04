@@ -61,17 +61,22 @@ let buttonsDom = [];
 class Products {
   async getProducts(searchText) {
     try {
-      let result = await fetch("products.json");
-      let data = await result.json();
-      let products = data.items;
+      let result = await fetch("https://fakestoreapi.com/products");
+      let products = await result.json();
+      // console.log(products);
       products = products.map((item) => {
-        const title = item.name_d;
+        const title = item.title;
         const price = item.price;
         const id = item.id;
-        return { title, price, id };
+        const image = item.image;
+        const category = item.category;
+        const description = item.description;
+        return { title, price, id, image, category, description };
       });
       return products;
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
@@ -82,10 +87,10 @@ class UI {
     products.forEach((product) => {
       result += `
           <div class="item">
-                <img src="./images/5eaf615122919-1.png" alt="charcoal protraits"/>
+                <img src="${product.image}" alt="charcoal protraits"/>
                 <div class="grp">
-                  <h4 class="name">John Doe</h4>
-                  <h4 class="categories">Abstract</h4>
+                
+               
                 </div>
                 <small class="title">${product.title}</small>
                 <div class="check">
@@ -155,13 +160,14 @@ class UI {
   setCartValues(cart) {
     let tempTotal = 0;
     cart.map((item) => {
-      tempTotal += parseFloat(item.price);
+      tempTotal += parseInt(item.price);
     });
     cartTotal.innerText = `${tempTotal}`;
   }
 
   // Display the item to the Dom
   addCartItem(item) {
+    // console.log(item.description);
     const div = document.createElement("div");
     div.classList.add("cart-items");
     div.innerHTML = `
@@ -172,9 +178,7 @@ class UI {
               <p class="title">${item.title}</p>
               <h4>$${item.price}</h4>
               <small class="description"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet provident vitae nihil. Inventore accusamus odit tenetur
-                ullam, doloremque totam animi.</small
+                >${item.description}</small
               >
               <a href="#!" class="remove-item" data-id="${item.id}">remove</a>
             </div>
