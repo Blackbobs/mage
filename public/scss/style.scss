@@ -645,6 +645,16 @@ main {
             align-items: center;
             justify-content: space-between;
             margin: 5px;
+
+            .author {
+              text-transform: capitalize;
+              font-size: 0.9rem;
+            }
+
+            .category {
+              text-transform: capitalize;
+              font-size: 0.9rem;
+            }
           }
 
           .title {

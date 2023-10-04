@@ -65,7 +65,7 @@ class Products {
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
-        const title = item.title;
+        const title = item.name_d;
         const price = item.price;
         const id = item.id;
         return { title, price, id };
@@ -86,8 +86,8 @@ class UI {
           <div class="item">
                 <img src="./images/5eaf615122919-1.png" alt="charcoal protraits"/>
                 <div class="grp">
-                <h3 class=""></h3>
-               
+                <h3 class="author">john doe</h3>
+                <h3 class="category">melancoly</h3>
                 </div>
                 <small class="title">${product.title}</small>
                 <div class="check">
@@ -141,7 +141,6 @@ class UI {
         // Add item to the cart
         let cartItem = { ...Storage.getProducts(id) };
         cart = [...cart, cartItem];
-        // console.log(cart);
 
         // Save cart in storage
         Storage.saveCart(cart);
@@ -165,7 +164,6 @@ class UI {
 
   // Display the item to the Dom
   addCartItem(item) {
-    // console.log(item.description);
     const div = document.createElement("div");
     div.classList.add("cart-items");
     div.innerHTML = `
@@ -176,7 +174,7 @@ class UI {
               <p class="title">${item.title}</p>
               <h4>$${item.price}</h4>
               <small class="description"
-                >${item.description}</small
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugiat perferendis adipisci placeat repellendus iusto similique ipsa voluptates voluptatum vitae?</small
               >
               <a href="#!" class="remove-item" data-id="${item.id}">remove</a>
             </div>
