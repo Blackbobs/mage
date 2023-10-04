@@ -61,17 +61,14 @@ let buttonsDom = [];
 class Products {
   async getProducts(searchText) {
     try {
-      let result = await fetch("https://fakestoreapi.com/products");
-      let products = await result.json();
-      // console.log(products);
+      let result = await fetch("products.json");
+      let data = await result.json();
+      let products = data.items;
       products = products.map((item) => {
         const title = item.title;
         const price = item.price;
         const id = item.id;
-        const image = item.image;
-        const category = item.category;
-        const description = item.description;
-        return { title, price, id, image, category, description };
+        return { title, price, id };
       });
       return products;
     } catch (error) {
@@ -87,9 +84,9 @@ class UI {
     products.forEach((product) => {
       result += `
           <div class="item">
-                <img src="${product.image}" alt="charcoal protraits"/>
+                <img src="./images/5eaf615122919-1.png" alt="charcoal protraits"/>
                 <div class="grp">
-                
+                <h3 class=""></h3>
                
                 </div>
                 <small class="title">${product.title}</small>
@@ -144,6 +141,7 @@ class UI {
         // Add item to the cart
         let cartItem = { ...Storage.getProducts(id) };
         cart = [...cart, cartItem];
+        // console.log(cart);
 
         // Save cart in storage
         Storage.saveCart(cart);
