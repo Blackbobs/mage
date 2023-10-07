@@ -19,14 +19,12 @@ const closeMenu = document.querySelector(".close-menu");
 const barMenu = document.querySelector(".fa-bars-staggered");
 const profileIcon = document.querySelector(".profile-link");
 const search = document.querySelector(".search");
-const checkoutBtn = document.querySelector(".checkout-btn");
+// const checkoutBtn = document.querySelector(".checkout-btn");
+// let stripe = Stripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 signupForm.addEventListener("submit", signUp);
 loginForm.addEventListener("submit", login);
 
-checkoutBtn.addEventListener("click", () => {
-  console.log(123);
-});
 // Event Listeners
 barMenu.addEventListener("click", displayMenu);
 
@@ -51,6 +49,10 @@ profileIcon.addEventListener("click", () => {
   profilePage.classList.add("show");
   displayMenu();
 });
+
+// checkoutBtn.addEventListener("click", () => {
+//   console.log(123);
+// });
 
 // Cart array
 let cart = [];
@@ -149,6 +151,7 @@ class UI {
         this.setCartValues(cart);
         // Add Item to the cart Dom
         this.addCartItem(cartItem);
+        Storage.setCookie(cart);
       });
     });
   }
@@ -255,6 +258,10 @@ export class Storage {
   static saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
+
+  // static setCookie(cart) {
+  //   document.cookie = `cart = ${JSON.stringify(cart)}`;
+  // }
 
   // Get items in the cart from storage
   static getCart() {
